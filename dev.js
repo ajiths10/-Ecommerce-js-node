@@ -14,7 +14,7 @@ toastBtn.addEventListener('click', ()=> {
     createNotification();
 });
 
-function createNotification() {
+const createNotification= () => {
     const notify = document.createElement('div');
     notify.classList.add('toast');
 
