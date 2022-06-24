@@ -38,5 +38,17 @@ function writeText() {
         index = 0;
     }
 }
+// setInterval(writeText,100) 
 
-setInterval(writeText,100)
+
+//popup Model
+const open = document.getElementById('open')
+const close = document.getElementById('close')
+const popupContainer = document.getElementById('popup_container')
+
+open.addEventListener('click', () => {
+    popupContainer.classList.add("active");
+});
+close.addEventListener('click', () => {
+    popupContainer.classList.remove("active");
+});
