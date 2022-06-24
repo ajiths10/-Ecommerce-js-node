@@ -58,3 +58,19 @@ const toggle = document.getElementById("toggle");
 toggle.addEventListener("change", (e) => {
   document.body.classList.toggle("dark", e.target.checked);
 });
+
+//image Carousel
+const img = document.getElementById('images');
+let idx = 0;
+const imgs = document.querySelectorAll('#images img');
+console.log(imgs.length);
+function run() {
+    idx++;
+    if(idx > imgs.length -1 ){
+        idx = 0;
+    }
+    img.style.transform = `translateX(${-idx * 500}px)` ;
+    
+
+}
+setInterval(run, 2000 )
