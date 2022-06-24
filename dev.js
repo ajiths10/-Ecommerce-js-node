@@ -1,54 +1,60 @@
 //side nav
-const btn = document.getElementById('btn')
-const nav = document.getElementById('nav')
+const btn = document.getElementById("btn");
+const nav = document.getElementById("nav");
 
-btn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    btn.classList.toggle('active');
+btn.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  btn.classList.toggle("active");
 });
 
 //Toast message notification
-const toastBtn = document.getElementById('toastBtn');
+const toastBtn = document.getElementById("toastBtn");
 
-toastBtn.addEventListener('click', ()=> {
-    createNotification();
+toastBtn.addEventListener("click", () => {
+  createNotification();
 });
 
-const createNotification= () => {
-    const notify = document.createElement('div');
-    notify.classList.add('toast');
+const createNotification = () => {
+  const notify = document.createElement("div");
+  notify.classList.add("toast");
 
-    notify.innerText = "Hello world"
-    container.appendChild(notify);
+  notify.innerText = "Hello world";
+  container.appendChild(notify);
 
-    setTimeout(() => {
-        notify.remove();
-    }, 3000);
-}
+  setTimeout(() => {
+    notify.remove();
+  }, 3000);
+};
 
 //Auto writing text
 
-const text = 'Hello world !!';
+const text = "Hello world !!";
 let index = 0;
 
 function writeText() {
-    document.body.innerText = text.slice(0, index);
-    index++;
-    if(index > text.length - 1){
-        index = 0;
-    }
+  document.body.innerText = text.slice(0, index);
+  index++;
+  if (index > text.length - 1) {
+    index = 0;
+  }
 }
-// setInterval(writeText,100) 
-
+// setInterval(writeText,100)
 
 //popup Model
-const open = document.getElementById('open')
-const close = document.getElementById('close')
-const popupContainer = document.getElementById('popup_container')
+const open = document.getElementById("open");
+const close = document.getElementById("close");
+const popupContainer = document.getElementById("popup_container");
 
-open.addEventListener('click', () => {
-    popupContainer.classList.add("active");
+open.addEventListener("click", () => {
+  popupContainer.classList.add("active");
 });
-close.addEventListener('click', () => {
-    popupContainer.classList.remove("active");
+close.addEventListener("click", () => {
+  popupContainer.classList.remove("active");
+});
+
+//Toggle dark mode
+const toggle = document.getElementById("toggle");
+
+toggle.addEventListener("change", (e) => {
+  document.body.classList.toggle("dark", e.target.checked);
 });

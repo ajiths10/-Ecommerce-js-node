@@ -5,6 +5,8 @@ body {
     font-family: "poppins", sans-serif;
     margin: 0;
     min-height: 100vh;
+    flex-direction: column;
+    transition: background 0.3s linear, color 0.3s linear;
 }
 *{
     box-sizing: border-box;
@@ -109,4 +111,20 @@ nav.active{
     color: blueviolet;
     border: none;
     font-weight: bold;
+}
+
+body.dark {
+    background-color: #1f1f1f;
+    color: white;
+    transition: background 0.3s linear;
+
+}
+.toggle-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+#toggle-label {
+    cursor: pointer;
+    user-select: none;
 }
