@@ -139,8 +139,20 @@ body.dark {
     transition:  transform 0.3s linear;
     transform: translateX(0);
 }
-img {
+#img {
     object-fit: cover;
     height: 500px;
     width: 500px;
+}
+#zoom-container {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+}
+#zoomimg{
+    transform-origin: center center;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }

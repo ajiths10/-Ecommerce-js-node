@@ -62,7 +62,7 @@ toggle.addEventListener("change", (e) => {
 //image Carousel
 const img = document.getElementById('images');
 let idx = 0;
-const imgs = document.querySelectorAll('#images img');
+const imgs = document.querySelectorAll('#images #img');
 console.log(imgs.length);
 function run() {
     idx++;
@@ -74,3 +74,21 @@ function run() {
 
 }
 setInterval(run, 2000 )
+
+
+//Zoom image hover over
+ const zoomContainer = document.getElementById('zoom-container');
+ const zoomimg = document.querySelector('#zoomimg');
+
+ zoomContainer.addEventListener('mouseover', (e) => {
+  const x = e.clientX - e.target.offsetLeft;
+  const y = e.clientY - e.target.offsetTop;
+
+  zoomimg.style.transformOrigin = `${x}px ${y}px`;
+  zoomimg.style.transform = "scale(2)";
+ })
+
+ zoomContainer.addEventListener("mouseleave", ()=>{
+  zoomimg.style.transformOrigin = 'center center';
+  zoomimg.style.transform = "scale(1)";
+ })
