@@ -31,7 +31,7 @@ const createNotification = () => {
 const text = "Hello world !!";
 let index = 0;
 
-function writeText() {
+const writeText = () => {
   document.body.innerText = text.slice(0, index);
   index++;
   if (index > text.length - 1) {
@@ -64,7 +64,7 @@ const img = document.getElementById('images');
 let idx = 0;
 const imgs = document.querySelectorAll('#images #img');
 console.log(imgs.length);
-function run() {
+const run = ()=> {
     idx++;
     if(idx > imgs.length -1 ){
         idx = 0;
